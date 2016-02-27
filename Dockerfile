@@ -39,7 +39,7 @@ RUN pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/te
 RUN git clone https://github.com/BVLC/caffe
 WORKDIR /home/frameworks/caffe
 RUN cp Makefile.config.example Makefile.config
-    # We uncomment line in Makefile.config to use CPU version
+# We uncomment line in Makefile.config to use CPU version
 RUN sed -i '/CPU_ONLY := 1/s/^#//g' Makefile.config
 RUN make all
 RUN make test
