@@ -26,7 +26,6 @@ RUN apt-get update && apt-get install -y \
     # For Theano
     g++ \
     gfortran \
-    python-scipy \
     libevent-dev
     
 RUN mkdir /home/frameworks
